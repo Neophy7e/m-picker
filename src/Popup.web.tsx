@@ -20,7 +20,7 @@ const PopupPicker = React.createClass<IPopupPickerProps, any>({
     if (!this.state.visible) {
       return null;
     }
-    const { prefixCls } = props;
+    const { prefixCls, secondHeader } = props;
     return (
       <Modal
         prefixCls={`${prefixCls}`}
@@ -46,6 +46,7 @@ const PopupPicker = React.createClass<IPopupPickerProps, any>({
               </div>
             </Touchable>
           </div>
+          {secondHeader}
           {this.getContent()}
         </div>
       </Modal>
